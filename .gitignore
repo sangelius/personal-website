@@ -1,0 +1,3 @@
+*.pyc
+my.cnf
+local_settings.py
