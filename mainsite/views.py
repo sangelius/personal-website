@@ -15,3 +15,9 @@ def index(request):
         'contact_form': ContactForm(),
     }
     return render(request, 'mainsite/index.html', content)
+
+def swing_dance(request):
+    content = {
+        'contact_form': ContactForm(),
+    }
+    return render(request, 'mainsite/swing_dance.html', content)

@@ -1,0 +1,264 @@
+{% extends 'mainsite/base.html' %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}About me{% endblock %}
+
+{% block nav_bar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-swing fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#about">
+        <span class="d-block d-lg-none">Scott Angelius</span>
+        <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/scottangelius.jpg' %}" alt="Scott Angelius">
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <h3>
+                <a class="nav-link js-scroll-trigger" href="{% url 'index' %}">Resume</a>
+            </h3>
+            <hr>
+            <h3>
+                Swing Dancing
+            </h3>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#pictures">Pictures</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#videos">Videos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#bio">Bio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock%}
+
+{% block content_full %}
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+        <div class="w-100">
+            <h1 class="mb-0 title-swing">Scott
+                <span class="text-swing">Angelius</span>
+            </h1>
+
+            <p class="lead mb-3">
+                I love swing dancing, teaching swing dance, and watching other dancers swing dance. I've been dancing since
+                1998 and it's still a huge passion in my life. Lindy Hop is my main dance, but all of the swing dances are
+                so intriguing to me because of the extrodinary amount space for self expression.
+            </p>
+            <div class="blockquote-wrapper">
+                <div class="blockquote">
+                    <p class="quote">
+                        Dancing is more than just moving body parts; it is a pathway of expressing your deepest inner thoughts.
+                    </p>
+                    <p class="quote-source">&mdash;Normani Kordei</p>
+                </div>
+            </div>
+            <p class="lead mb-3">
+                I teach all levels of Lindy Hop and Charleston; all levels of teacher training; up to intermediate level Carolina
+                Shag; and up to advanced level Balboa.
+            </p>
+            <p class="lead mb-3">
+                My preferred teaching partners are: <a href="https://www.facebook.com/grace.a.durant" target="_blank">Grace Durant</a>
+                (Austin, TX), <a href="https://www.facebook.com/natalia.eristavi" target="_blank">Natalia Eristavi</a>
+                (Irvine, CA), and <a href="https://www.facebook.com/kelly.arsenault.7524" target="_blank">Kelly Arsenault</a>
+                (Knoxville, TN).
+            </p>
+        </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="pictures">
+        <div class="w-100">
+            <h2 class="mb-3">Pictures</h2>
+
+            <div class="swing_pictures row">
+                <div class="col-md-4">
+                    <a href="{% static 'img/scott_lindyfocus1.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lindyfocus1.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_austinsoul2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_austinsoul2.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_hardknox.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_hardknox.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_ark2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_ark2.jpg' %}">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% static 'img/scott_lindyfocus3.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lindyfocus3.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_austinsoul1.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_austinsoul1.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_halloween.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_halloween.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_lone_star.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lone_star.jpg' %}">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% static 'img/scott_lindyfocus2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lindyfocus2.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_lhd1.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lhd1.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_lhd2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lhd2.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_bal.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_bal.jpg' %}">
+                    </a>
+                    <a href="{% static 'img/scott_lotr.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
+                        <img height="auto" width="auto" src="{% static 'img/scott_lotr.jpg' %}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="videos">
+        <div class="w-100">
+        <h2 class="mb-3">Videos</h2>
+        
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/fY_Xw2SjcbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/3W7-aGg-91I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/8XaTlpS53ZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/p5xQmJb6aUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/aGrVnoME6tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="bio">
+        <div class="w-100">
+            <h2 class="mb-4">Bio</h2>
+
+            <p>Scott has been teaching swing dancing since 1998. He started in what became a mecca of
+                swing dance, Austin, TX, where he helped build the community by teaching throughout the city
+                and eventually starting and operating The Lindy Project, a highly successful dance company.
+                Now in Knoxville, TN, he teaches regularly and is the current president of the 
+                <a href="http://knoxswingdance.org/" target="_blank">KSDA</a>.</p>
+
+            <p>He loves social dancing for the mental/physical connection that comes from dancing with a
+                partner, and strives to dance where both people can hear each other and express themselves.
+                In class, he teaches what he loves as a dancer, focusing on the building blocks that apply
+                across the dance as well as the nuances that help students grow past any plateaus they may be
+                in—while keeping things simple to understand.</p>
+
+            <p>Scott teaches, performs, and competes throughout the U.S. He has won numerous Lindy Hop
+                competitions and was a member of the renowned team Lindy Hoppers’ Dozen. And while his
+                first love is Lindy Hop, he also trained extensively in West Coast Swing and has a passion for
+                Carolina Shag.</p>
+
+            <p class="mb-0">In addition to teaching, he helps run dance events. He is an Event Director of
+                <a href="http://www.lindyfest.org/" target="_blank">Lindyfest</a>, Chief Operating Officer of the
+                <a href="https://www.ilhc.com/" target="_blank">International Lindy Hop Championships</a>,
+                and the Competition Manager at many of the largest dance competitions in the country. He has also
+                developed a competition scoring management system, 
+                <a href="https://www.rp-scoring.com/" target="_blank">RP-Scoring</a>,
+                which is utilized by most large Lindy Hop events in the country.</p>
+        </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
+        <div class="w-100">
+            <h2 class="mb-4">Contact me</h2>
+
+            <form id="contactForm" novalidate>
+                {% csrf_token %}
+                <div class="row vertical-align">
+                    <div class="col-lg-12" id="contact_result">
+                    </div>
+                </div>
+                <div class="row vertical-align" id="form_content">
+                    <div class="col-md-6 mb-3">
+                        <div class="">
+                            <p id="contact_name_error" class="help-block text-danger mt-3 mb-0"></p>
+                            {{ contact_form.name }}
+                        </div>
+                        <div class="">
+                            <p id="contact_email_error" class="help-block text-danger mt-3 mb-0"></p>
+                            {{ contact_form.email }}
+                        </div>
+                        <div class="">
+                            <p id="contact_phone_error" class="help-block text-danger mt-3 mb-0"></p>
+                            {{ contact_form.phone }}
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="">
+                            <p id="contact_message_error" class="help-block text-danger mt-3 mb-0"></p>
+                            {{ contact_form.message }}
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12 text-center mb-0">
+                        <input id="id_submit" type="submit" value="Send Message" class="btn btn-xl btn-primary btn-green"/>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'vendor/lightbox/ekko-lightbox.js' %}"></script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+    </script>
+    <script src="{% static 'js/contactform.js' %}"></script>
+{% endblock %}

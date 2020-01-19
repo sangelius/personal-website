@@ -5,6 +5,43 @@
 
 {% block title %}About me{% endblock %}
 
+{% block nav_bar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#about">
+        <span class="d-block d-lg-none">Scott Angelius</span>
+        <span class="d-none d-lg-block">
+            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/Scott-Angelius.jpg' %}" alt="Scott Angelius">
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <h3>
+                Resume
+            </h3>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <hr>
+            <h3>
+                <a class="nav-link js-scroll-trigger" href="{% url 'swing_dance' %}">Swing Dancing</a>
+            </h3>
+        </ul>
+    </div>
+</nav>
+{% endblock%}
+
 {% block content_full %}
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
@@ -102,38 +139,6 @@
                     {% endfor %}
                 </ul>
             </div>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="swing-dancing">
-        <div class="w-100">
-            <h2 class="mb-4">Swing Dancing</h2>
-
-            <p>Scott has been teaching swing dancing since 1998. He started in what is now a mecca of swing 
-                dance, Austin, TX, in which he helped build the community by teaching at the university, 
-                with multiple studios, and running a successful dance company for over 10 years. Now in 
-                Knoxville, TN, he teaches regularly and is the current 
-                president of the <a href="http://knoxswingdance.org/" target="_blank">KSDA</a>. </p>
-
-            <p>Scott teaches, performs, and competes throughout the U.S. He has won numerous Lindy Hop 
-                competitions and was a member of the renowned team 
-                <a href="https://www.youtube.com/watch?v=8XaTlpS53ZM" target="_blank">Lindy Hoppers’ Dozen</a>. 
-                While his first love 
-                is Lindy Hop, he has also trained extensively in West Coast Swing and has a passion for 
-                Carolina Shag. He teaches Lindy Hop, Balboa, Charleston, and Carolina Shag, with a focus on the 
-                building blocks that connect to everything within the dance. </p>
-
-            <p class="mb-0">In addition to teaching, he helps run dance events. He is an Event Director of 
-                <a href="http://lindyfest.hsds.org/" target="_blank">Lindyfest</a>, one of
-                the longest-running events in the country; Chief Operating Officer of the 
-                <a href="https://www.ilhc.com/" target="_blank">International Lindy Hop Championships</a>, 
-                the largest Lindy Hop dance competition in the world; and the Competition 
-                Coordinator at many of the largest dance competitions in the country. He has also developed a 
-                competition scoring management system, 
-                <a href="https://www.rp-scoring.com/" target="_blank">RP-Scoring</a>, 
-                which is utilized by most large dance events in the country. </p>
         </div>
     </section>
 

@@ -42,6 +42,11 @@ h3 {
   font-size: 2rem;
 }
 
+hr {
+  border-color: rgba(255, 255, 255, 0.5);
+  margin: 16px 10px;
+}
+
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
@@ -183,6 +188,14 @@ section.resume-section .resume-item .resume-date {
   color: #BD5D38 !important;
 }
 
+.bg-swing {
+  background-color: #74C26F !important;
+}
+
+.text-swing {
+  color: #74C26F !important;
+}
+
 a {
   color: #BD5D38;
 }
@@ -201,5 +214,100 @@ a:hover, a:focus, a:active {
   background-color: #BD5D38 !important;
 }
 .btn-orange:disabled {
-  background-color: rgb(202, 125, 95) !important;
+  background-color: #CA7D5F !important;
+}
+
+.btn-green {
+  background-color: #495057;
+  border: 0;
+}
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active {
+  background-color: #74C26F !important;
+}
+.btn-green:disabled {
+  background-color: #90CD8C !important;
+}
+
+.title-swing {
+  padding-bottom: 20px;
+}
+
+/*pictures*/
+.swing_pictures img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+#ninja-slider .caption {
+  position:absolute;
+  top:100%;
+}
+#ninja-slider .slider-inner {padding-bottom: 100px!important;}
+#ninja-slider li {margin-bottom: 100px!important;}
+#ninja-slider ul {overflow:visible!important;}
+
+/*videos*/
+.video-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.video-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+.swing_video {
+  margin-bottom: 30px;
+}
+.modal-body {
+  padding: 5px;
+}
+
+/*quote*/
+.blockquote-wrapper {
+  display: flex;
+  padding: 0 20px;
+}
+.blockquote {
+   position: relative;
+   padding: 15px 5px;
+   width: 100%;
+   max-width: 500px;
+   z-index: 1;
+   margin: 10px auto 40px;
+   align-self: center;
+   border-top: solid 1px #868e96;;
+   border-bottom: solid 1px #868e96;;
+}
+.blockquote:after {
+   position: absolute;
+   content: "”";
+   color: #868e96;;
+   font-size: 11rem;
+   line-height: 0;
+   bottom: -50px;
+   right: 10px;
+}
+p.quote {
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0;
+}
+p.quote-source {
+   position: relative;
+   font-size: 15px;
+   line-height: 1;
+   margin: 0;
+   padding-top: 20px;
+   z-index: 1;
+}
+.quote-source {
+  margin: 0 0 5px;
 }
