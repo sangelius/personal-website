@@ -3,7 +3,7 @@ $(document).ready(function(){ // wait for the page to finish loading
     // submit contact info through ajax
     function submit_contact() {
         $.ajax({
-            url : "submit_contact/", // the endpoint
+            url : "/submit-contact/", // the endpoint
             type : "POST", // http method
             data : $("#contactForm").serialize(), // serialized form data
 
