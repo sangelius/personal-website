@@ -3,190 +3,28 @@
 {% load i18n %}
 {% load staticfiles %}
 
-{% block title %}About me{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block nav_bar %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#about">
-        <span class="d-block d-lg-none">Scott Angelius</span>
-        <span class="d-none d-lg-block">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/Scott-Angelius.jpg' %}" alt="Scott Angelius">
-        </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <h3>
-                Resume
-            </h3>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-            <hr>
-            <h3>
-                <a class="nav-link js-scroll-trigger" href="{% url 'swing_dance' %}">Swing Dancing</a>
-            </h3>
-        </ul>
+{% block page_body %}
+
+<body id="page-top">
+
+    <div id="page-full">
+        <div id="page-left-half">
+            <a href="{% url 'resume' %}">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/Scott-Angelius.jpg' %}" alt="Scott Angelius">
+                <h3>Resume</h3>
+            </a>
+        </div>
+
+        <div id="page-right-half">
+            <a href="{% url 'swing_dance' %}">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/scottangelius.jpg' %}" alt="Scott Angelius">
+                <h3>Swing Dancing</h3>
+            </a>
+        </div>
     </div>
-</nav>
+
+</body>
+
 {% endblock%}
-
-{% block content_full %}
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-        <div class="w-100">
-        <h1 class="mb-0">Scott
-            <span class="text-primary">Angelius</span>
-        </h1>
-        <div class="subheading mb-4">
-            Developer and Data Analyst · Knoxville, TN · <a class="js-scroll-trigger" href="#contact">contact me</a>
-        </div>
-        <p class="lead mb-3">
-            I am an analytical, detail-oriented developer and data analyst with a passion for designing and 
-            building solutions for clients and working with driven people. My experience includes coding, 
-            research, working with clients, and project leadership. I'm a quick learner who can absorb new 
-            ideas and communicate clearly and effectively.
-        </p>
-        <p class="lead mb-5">
-            I'm currently looking for contract and full-time work in meaningful spaces where I can bring my 
-            development, data analysis, and leadership skills to help your team build great solutions.
-        </p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/scott-angelius/" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.facebook.com/scottangelius" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://github.com/sangelius" target="_blank">
-            <i class="fab fa-github"></i>
-            </a>
-        </div>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="experience">
-        <div class="w-100">
-            <h2 class="mb-4">Experience</h2>
-            {% for ex in experience %}
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between {% if forloop.last %}mb-0{% else %}mb-4{% endif %}">
-                    <div class="resume-content">
-                        <h3 class="mb-0">{{ ex.job_title }}</h3>
-                        <div class="subheading mb-3">{{ ex.employer }}</div>
-                        <p>
-                            {{ ex.description|safe }}
-                        </p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">{{ ex.start_date }} – {{ ex.end_date }}</span>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-        <div class="w-100">
-        <h2 class="mb-3">Skills</h2>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="subheading mb-3"><p class="text-md-center">Data Analysis</p></div>
-                <ul class="fa-ul mb-5">
-                    {% for skill in data_skill %}
-                        <li><i class="fa-li fa fa-check"></i> {{ skill.skill }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <div class="subheading mb-3"><p class="text-md-center">Back-end</p></div>
-                <ul class="fa-ul mb-5">
-                    {% for skill in backend_skill %}
-                        <li><i class="fa-li fa fa-check"></i> {{ skill.skill }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="subheading mb-3"><p class="text-md-center">Design</p></div>
-                <ul class="fa-ul mb-0">
-                    {% for skill in design_skill %}
-                        <li><i class="fa-li fa fa-check"></i> {{ skill.skill }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <div class="subheading mb-3"><p class="text-md-center">Front-end</p></div>
-                <ul class="fa-ul mb-0">
-                    {% for skill in frontend_skill %}
-                        <li><i class="fa-li fa fa-check"></i> {{ skill.skill }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
-        <div class="w-100">
-            <h2 class="mb-4">Contact me</h2>
-
-            <form id="contactForm" novalidate>
-                {% csrf_token %}
-                <div class="row vertical-align">
-                    <div class="col-lg-12" id="contact_result">
-                    </div>
-                </div>
-                <div class="row vertical-align" id="form_content">
-                    <div class="col-md-6 mb-3">
-                        <div class="">
-                            <p id="contact_name_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.name }}
-                        </div>
-                        <div class="">
-                            <p id="contact_email_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.email }}
-                        </div>
-                        <div class="">
-                            <p id="contact_phone_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.phone }}
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="">
-                            <p id="contact_message_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.message }}
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-12 text-center mb-0">
-                        <input id="id_submit" type="submit" value="Send Message" class="btn btn-xl btn-primary btn-orange"/>
-                    </div>
-                </div>
-            </form>
-
-        </div>
-    </section>
-
-{% endblock %}
-
-{% block script %}
-    <script src="{% static 'js/contactform.js' %}"></script>
-{% endblock %}

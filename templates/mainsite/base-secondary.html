@@ -1,0 +1,30 @@
+{% extends 'mainsite/base.html' %}
+
+{% load staticfiles %}
+
+{% block page_body %}
+
+<body id="page-top">
+
+    {% block nav_bar %}{% endblock %}
+
+    <div class="container-fluid p-0">
+        
+        {% block content_full %}{% endblock %}
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% block script %}{% endblock %}
+</body>
+
+{% endblock %}

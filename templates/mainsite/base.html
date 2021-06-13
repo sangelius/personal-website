@@ -6,11 +6,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Developer and data analyst with a passion for designing and building solutions for clients and working with other driven people.">
+    <meta name="description" content="Economist, developer, and data analyst with a passion for designing and building solutions and working with other driven people.">
     <meta name="author" content="Scott Angelius">
     <meta http-equiv="Content-Language" content="en-US">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="developer, data analyst, swing dance, lindy hop" />
+    <meta name="keywords" content="economist, developer, data analyst, swing dance, lindy hop" />
     <link rel="shortcut icon" href="{% static 'img/icon.ico' %}" />
 
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
@@ -27,26 +27,6 @@
     <title>{% block title %}{% endblock %} | Scott Angelius</title>
 </head>
 
-<body id="page-top">
+{% block page_body %}{% endblock %}
 
-    {% block nav_bar %}{% endblock %}
-
-    <div class="container-fluid p-0">
-        
-        {% block content_full %}{% endblock %}
-
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="{% static 'js/main.js' %}"></script>
-
-    {% block script %}{% endblock %}
-</body>
 </html>

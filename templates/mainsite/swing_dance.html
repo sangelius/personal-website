@@ -1,13 +1,13 @@
-{% extends 'mainsite/base.html' %}
+{% extends 'mainsite/base-secondary.html' %}
 
 {% load i18n %}
 {% load staticfiles %}
 
-{% block title %}About me{% endblock %}
+{% block title %}Swing Dance{% endblock %}
 
 {% block nav_bar %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-swing fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#about">
+    <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
         <span class="d-block d-lg-none">Scott Angelius</span>
         <span class="d-none d-lg-block">
             <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/scottangelius.jpg' %}" alt="Scott Angelius">
@@ -18,11 +18,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-            <h3>
-                <a class="nav-link js-scroll-trigger" href="{% url 'index' %}">Resume</a>
-            </h3>
-            <hr>
-            <h3>
+            <h3 class="nav-title-h3">
                 Swing Dancing
             </h3>
             <li class="nav-item">
@@ -52,28 +48,21 @@
             <h1 class="mb-0 title-swing">Scott
                 <span class="text-swing">Angelius</span>
             </h1>
-
+            <div class="subheading mb-4">
+                Swing Dance Instructor · Knoxville, TN · <a class="js-scroll-trigger" href="#contact">contact me</a>
+            </div>
+    
             <p class="lead mb-3">
-                I love swing dancing. It's been a huge part of my life—teaching, competing, performing, and
-                supporting events—since I took my first class in 1998, and it's still a huge passion in my life today.
-                Primarily I dance Lindy Hop, but love all of the swing dances because of the extrodinary
-                amount space for self expression.
-            </p>
-            <p class="lead mb-3">
-                I teach all levels of Lindy Hop and Charleston; all levels of teacher training; up to intermediate level Carolina
-                Shag; and up to advanced level Balboa. And I teach with 
+                I've been a Lindy Hopper since 1998 and since my first class I've been hooked.
+                I love teaching and working with dedicated, focused dancers of all levels. 
+                My partners are
                 <a href="https://www.facebook.com/grace.a.durant" target="_blank">Grace Durant</a> (Austin, TX),
                 <a href="https://www.facebook.com/natalia.eristavi" target="_blank">Natalia Eristavi</a> (Irvine, CA), and
                 <a href="https://www.facebook.com/kelly.arsenault.7524" target="_blank">Kelly Arsenault</a> (Knoxville, TN).
             </p>
-            <div class="blockquote-wrapper">
-                <div class="blockquote">
-                    <p class="quote">
-                        Dancing is more than just moving body parts; it is a pathway of expressing your deepest inner thoughts.
-                    </p>
-                    <p class="quote-source">&mdash;Normani Kordei</p>
-                </div>
-            </div>
+            <p class="lead mb-3">
+                See my <a class="js-scroll-trigger" href="#bio">bio</a> below for more info.
+            </p>
         </div>
     </section>
 
@@ -178,30 +167,30 @@
         <div class="w-100">
             <h2 class="mb-4">Bio</h2>
 
-            <p>Scott has been teaching swing dancing since 1998. He started in what became a mecca of
-                swing dance, Austin, TX, where he helped build the community by teaching throughout the city
-                and eventually starting and operating The Lindy Project, a highly successful dance company.
-                Now in Knoxville, TN, he teaches regularly and is the current president of the 
-                <a href="http://knoxswingdance.org/" target="_blank">Knoxville Swing Dance Association</a>.</p>
+            <p>
+                Scott has been Lindy Hopping since 1998. He started in what became a mecca of swing dance,
+                Austin, TX, where he helped build the community by teaching, running a successful dance
+                company, and organizing events. Now in Knoxville, TN, he regularly teaches and DJs. And
+                while his first love is Lindy Hop, he also trained extensively in Balboa, West Coast
+                Swing, and Carolina Shag.
+            </p>
 
-            <p>He loves social dancing for the mental/physical connection that comes from dancing with a
-                partner, and strives to dance where both people can hear each other and express themselves.
-                In class, he teaches what he loves as a dancer, focusing on the building blocks that apply
-                across the dance as well as the nuances that help students grow past any plateaus they may be
-                in—while keeping things simple to understand.</p>
+            <p>
+                He is passionate about teaching and working with dedicated, focused dancers of all levels.
+                In class, he teaches what he loves: the fundamentals, partnership and listening, and
+                self-expression. Scott performs and competes throughout the U.S. He has won numerous
+                Lindy Hop competitions and was a member of the renowned team Lindy Hoppers’ Dozen. 
+            </p>
 
-            <p>Scott teaches, performs, and competes throughout the U.S. He has won numerous Lindy Hop
-                competitions and was a member of the renowned team Lindy Hoppers’ Dozen. And while his
-                first love is Lindy Hop, he also trained extensively in West Coast Swing and has a passion for
-                Carolina Shag.</p>
-
-            <p class="mb-0">In addition to teaching, he helps run dance events. He is an Event Director of
-                <a href="http://www.lindyfest.org/" target="_blank">Lindyfest</a>, Chief Operating Officer of the
-                <a href="https://www.ilhc.com/" target="_blank">International Lindy Hop Championships</a>,
-                and the Competition Manager at many of the largest dance competitions in the country. He has also
-                developed a competition scoring management system, 
+            <p class="mb-0">
+                He also helps organize dance events. He is the Chief Operating Officer of the
+                <a href="https://www.ilhc.com/" target="_blank">International Lindy Hop Championships</a>
+                and the Competition Manager at many of the largest dance competitions in the country.
+                He has also developed a competition scoring management system,
                 <a href="https://www.rp-scoring.com/" target="_blank">RP-Scoring</a>,
-                which is utilized by most large Lindy Hop events in the country.</p>
+                which is utilized by most large Lindy Hop events in the country. Previously he founded and
+                ran the Lone Star Championships and was an event director of Lindyfest.
+            </p>
         </div>
     </section>
 
