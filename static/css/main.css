@@ -392,3 +392,21 @@ p.quote-source {
     margin-top: 20px;
   }
 }
+
+.splide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+.splide__slide a {
+  line-height: 1;
+  display: none;
+  margin: 20px;
+}
+.splide__slide:hover {
+  opacity: 0.75;
+}
+.splide__slide:hover a {
+  display: block;
+}

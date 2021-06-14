@@ -3,6 +3,10 @@
 {% load i18n %}
 {% load staticfiles %}
 
+{% block style %}
+<link href="{% static 'vendor/splide/css/splide.min.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}Swing Dance{% endblock %}
 
 {% block nav_bar %}
@@ -72,53 +76,64 @@
         <div class="w-100">
             <h2 class="mb-3">Pictures</h2>
 
-            <div class="swing_pictures row">
-                <div class="col-md-4">
-                    <a href="{% static 'img/scott_lindyfocus1.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lindyfocus1.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_austinsoul2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_austinsoul2.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_hardknox.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_hardknox.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_ark2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_ark2.jpg' %}">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="{% static 'img/scott_lindyfocus3.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lindyfocus3.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_austinsoul1.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_austinsoul1.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_halloween.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_halloween.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_lone_star.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lone_star.jpg' %}">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="{% static 'img/scott_lindyfocus2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lindyfocus2.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_lhd1.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lhd1.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_lhd2.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lhd2.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_bal.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_bal.jpg' %}">
-                    </a>
-                    <a href="{% static 'img/scott_lotr.jpg' %}" data-toggle="lightbox" data-gallery="swing-pictures">
-                        <img height="auto" width="auto" src="{% static 'img/scott_lotr.jpg' %}">
-                    </a>
+            <div class="splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lindyfocus1.jpg' %}') no-repeat; background-position: 75% 60%; background-size: cover;">
+                            <a href="{% static 'img/scott_lindyfocus1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace1.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott-grace1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace2.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott-grace2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_austinsoul2.jpg' %}') no-repeat; background-position: 5% 60%; background-size: cover;">
+                            <a href="{% static 'img/scott_austinsoul2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lindyfocus3.jpg' %}') no-repeat; background-position: 60% 0%; background-size: cover;">
+                            <a href="{% static 'img/scott_lindyfocus3.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace3.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott-grace3.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace4.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott-grace4.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_austinsoul1.jpg' %}') no-repeat; background-position: center; background-size: cover;">
+                            <a href="{% static 'img/scott_austinsoul1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_hardknox.jpg' %}') no-repeat; background-position: 50% 75%; background-size: cover;">
+                            <a href="{% static 'img/scott_hardknox.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_ark2.jpg' %}') no-repeat; background-position: 50% 0%; background-size: cover;">
+                            <a href="{% static 'img/scott_ark2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_halloween.jpg' %}') no-repeat; background-position: center; background-size: cover;">
+                            <a href="{% static 'img/scott_halloween.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lone_star.jpg' %}') no-repeat; background-position: 40% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott_lone_star.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lindyfocus2.jpg' %}') no-repeat; background-position: center; background-size: cover;">
+                            <a href="{% static 'img/scott_lindyfocus2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lhd1.jpg' %}') no-repeat; background-position: 90% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott_lhd1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lhd2.jpg' %}') no-repeat; background-position: 10% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott_lhd2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_bal.jpg' %}') no-repeat; background-position: 30% 50%; background-size: cover;">
+                            <a href="{% static 'img/scott_bal.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                        <div class="splide__slide" style="background: url('{% static 'img/scott_lotr.jpg' %}') no-repeat; background-position: center; background-size: cover;">
+                            <a href="{% static 'img/scott_lotr.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -242,12 +257,25 @@
 {% endblock %}
 
 {% block script %}
-    <script src="{% static 'vendor/lightbox/ekko-lightbox.js' %}"></script>
-    <script>
-        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-    </script>
     <script src="{% static 'js/contactform.js' %}"></script>
+    <script src="{% static 'vendor/splide/js/splide.min.js' %}"></script>
+    <script>
+        new Splide( '.splide', {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+            cover: true,
+            height: '30rem',
+            padding: 20,
+            gap: 5,
+            breakpoints: {
+                900: {
+                    perPage: 2,
+                },
+                600: {
+                    perPage: 1,
+                }
+            }
+        } ).mount();
+    </script>
 {% endblock %}
