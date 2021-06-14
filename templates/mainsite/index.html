@@ -7,22 +7,30 @@
 
 {% block page_body %}
 
-<body id="page-top">
+<body id="page-index" class="grey-bg">
 
     <div id="page-full">
-        <div id="page-left-half">
-            <a href="{% url 'resume' %}">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/Scott-Angelius.jpg' %}" alt="Scott Angelius">
-                <h3>Resume</h3>
-            </a>
+
+        <div class="title-name">
+            <h1 class="mb-0">Scott <span class="title-last-name">Angelius</span></h1>
         </div>
 
-        <div id="page-right-half">
-            <a href="{% url 'swing_dance' %}">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/scottangelius.jpg' %}" alt="Scott Angelius">
-                <h3>Swing Dancing</h3>
-            </a>
+        <div id="left-right-container">
+            <div id="resume-left">
+                <a href="{% url 'resume' %}">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/scott-headshot.png' %}" alt="Scott Angelius">
+                    <h3>Resume</h3>
+                </a>
+            </div>
+    
+            <div id="dance-right">
+                <a href="{% url 'swing_dance' %}">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/scott_and_grace.jpg' %}" alt="Scott Angelius">
+                    <h3>Swing Dancing</h3>
+                </a>
+            </div>
         </div>
+
     </div>
 
 </body>
