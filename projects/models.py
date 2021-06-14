@@ -87,7 +87,8 @@ class Techs(models.Model):
     project = models.ForeignKey(
         Projects,
         related_name='project_tech',
-        blank=False
+        blank=False,
+        on_delete=models.CASCADE
     )
 
     #tech type
