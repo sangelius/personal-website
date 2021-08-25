@@ -4,7 +4,7 @@
 {% load staticfiles %}
 
 {% block style %}
-<link href="{% static 'vendor/splide/css/splide.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'vendor/lightbox2-2.11.3/dist/css/lightbox.min.css' %}">
 {% endblock %}
 
 {% block title %}Swing Dance{% endblock %}
@@ -76,61 +76,87 @@
         <div class="w-100">
             <h2 class="mb-3">Pictures</h2>
 
-            <div class="splide">
-                <div class="splide__track">
-                    <div class="splide__list">
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lindyfocus1.jpg' %}') no-repeat; background-position: 75% 60%; background-size: cover;">
-                            <a href="{% static 'img/scott_lindyfocus1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace1.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott-grace1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace2.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott-grace2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_austinsoul2.jpg' %}') no-repeat; background-position: 5% 60%; background-size: cover;">
-                            <a href="{% static 'img/scott_austinsoul2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lindyfocus3.jpg' %}') no-repeat; background-position: 60% 0%; background-size: cover;">
-                            <a href="{% static 'img/scott_lindyfocus3.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace3.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott-grace3.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott-grace4.jpg' %}') no-repeat; background-position: 50% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott-grace4.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_austinsoul1.jpg' %}') no-repeat; background-position: center; background-size: cover;">
-                            <a href="{% static 'img/scott_austinsoul1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_hardknox.jpg' %}') no-repeat; background-position: 50% 75%; background-size: cover;">
-                            <a href="{% static 'img/scott_hardknox.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_ark2.jpg' %}') no-repeat; background-position: 50% 0%; background-size: cover;">
-                            <a href="{% static 'img/scott_ark2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_halloween.jpg' %}') no-repeat; background-position: center; background-size: cover;">
-                            <a href="{% static 'img/scott_halloween.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lone_star.jpg' %}') no-repeat; background-position: 40% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott_lone_star.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lindyfocus2.jpg' %}') no-repeat; background-position: center; background-size: cover;">
-                            <a href="{% static 'img/scott_lindyfocus2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lhd1.jpg' %}') no-repeat; background-position: 90% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott_lhd1.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lhd2.jpg' %}') no-repeat; background-position: 10% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott_lhd2.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_bal.jpg' %}') no-repeat; background-position: 30% 50%; background-size: cover;">
-                            <a href="{% static 'img/scott_bal.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                        <div class="splide__slide" style="background: url('{% static 'img/scott_lotr.jpg' %}') no-repeat; background-position: center; background-size: cover;">
-                            <a href="{% static 'img/scott_lotr.jpg' %}" target="_blank"><i class="fas fa-search-plus"></i></a>
-                        </div>
-                    </div>
+            <div class="row swing_pictures">
+                <div class="col-lg-4">
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lindyfocus1.jpg' %}"
+                    data-title="Scott Angelius and Kelly Arsenault at Lindy Focus">
+                        <img class="img" src="{% static 'img/scott_lindyfocus1.jpg' %}"
+                        alt="Scott Angelius and Kelly Arsenault at Lindy Focus"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott-grace3.jpg' %}"
+                    data-title="Scott Angelius and Grace Durant dancing at Hot Rhythm">
+                        <img class="img" src="{% static 'img/scott-grace3.jpg' %}"
+                        alt="Scott Angelius and Grace Durant dancing at Hot Rhythm"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott-grace4.jpg' %}"
+                    data-title="Scott Angelius and Grace Durant dancing at Hot Rhythm">
+                        <img class="img" src="{% static 'img/scott-grace4.jpg' %}"
+                        alt="Scott Angelius and Grace Durant dancing at Hot Rhythm"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lindyfocus2.jpg' %}"
+                    data-title="Scott Angelius and Kelly Arsenault at Lindy Focus">
+                        <img class="img" src="{% static 'img/scott_lindyfocus2.jpg' %}"
+                        alt="Scott Angelius and Kelly Arsenault at Lindy Focus"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_bal.jpg' %}"
+                    data-title="Scott Angelius dancing with the Amazbals">
+                        <img class="img" src="{% static 'img/scott_bal.jpg' %}"
+                        alt="Scott Angelius dancing with the Amazbals"/>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a data-lightbox="swing-images" href="{% static 'img/scott-grace1.jpg' %}"
+                    data-title="Scott Angelius and Grace Durant in Austin">
+                        <img class="img" src="{% static 'img/scott-grace1.jpg' %}"
+                        alt="Scott Angelius and Grace Durant in Austin"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_austinsoul1.jpg' %}"
+                    data-title="Scott Angelius and Kelly Arsenault dancing to soul music">
+                        <img class="img" src="{% static 'img/scott_austinsoul1.jpg' %}"
+                        alt="Scott Angelius and Kelly Arsenault dancing to soul music"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lindyfocus3.jpg' %}"
+                    data-title="Scott Angelius and Kelly Arsenault dancing at Lindy Focus">
+                        <img class="img" src="{% static 'img/scott_lindyfocus3.jpg' %}"
+                        alt="Scott Angelius and Kelly Arsenault dancing at Lindy Focus"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lhd1.jpg' %}"
+                    data-title="Lindy Hoppers' Dozen dancing">
+                        <img class="img" src="{% static 'img/scott_lhd1.jpg' %}"
+                        alt="Lindy Hoppers' Dozen dancing"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lotr.jpg' %}"
+                    data-title="Scott Angelius dancing at Lindy on the Rocks">
+                        <img class="img" src="{% static 'img/scott_lotr.jpg' %}"
+                        alt="Scott Angelius dancing at Lindy on the Rocks"/>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a data-lightbox="swing-images" href="{% static 'img/scott-grace2.jpg' %}"
+                    data-title="Scott Angelius and Grace Durant in Austin">
+                        <img class="img" src="{% static 'img/scott-grace2.jpg' %}"
+                        alt="Scott Angelius and Grace Durant in Austin"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_austinsoul2.jpg' %}"
+                    data-title="Scott Angelius and Kelly Arsenault dancing to soul music">
+                        <img class="img" src="{% static 'img/scott_austinsoul2.jpg' %}"
+                        alt="Scott Angelius and Kelly Arsenault dancing to soul music"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lone_star.jpg' %}"
+                    data-title="Scott Angelius and Evita Arce dancing in Austin">
+                        <img class="img" src="{% static 'img/scott_lone_star.jpg' %}"
+                        alt="Scott Angelius and Evita Arce dancing in Austin"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_halloween.jpg' %}"
+                    data-title="Scott dressed up for Halloween">
+                        <img class="img" src="{% static 'img/scott_halloween.jpg' %}"
+                        alt="Scott dressed up for Halloween"/>
+                    </a>
+                    <a data-lightbox="swing-images" href="{% static 'img/scott_lhd2.jpg' %}"
+                    data-title="Lindy Hoppers' Dozen crew">
+                        <img class="img" src="{% static 'img/scott_lhd2.jpg' %}"
+                        alt="Lindy Hoppers' Dozen crew"/>
+                    </a>
                 </div>
             </div>
 
@@ -146,31 +172,43 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/FkCy65k4maQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/FFev2Y6cp88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="video-responsive swing_video">
+                    <iframe width="392" height="221" src="https://www.youtube.com/embed/8Vj-v9JDy2U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="video-responsive swing_video">
                     <iframe width="392" height="221" src="https://www.youtube.com/embed/fY_Xw2SjcbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-6">
+            <div class="col-xl-4">
                 <div class="video-responsive swing_video">
                     <iframe width="392" height="221" src="https://www.youtube.com/embed/3W7-aGg-91I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-4">
                 <div class="video-responsive swing_video">
                     <iframe width="392" height="221" src="https://www.youtube.com/embed/8XaTlpS53ZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-6">
+            <div class="col-xl-4">
                 <div class="video-responsive swing_video">
                     <iframe width="392" height="221" src="https://www.youtube.com/embed/p5xQmJb6aUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="video-responsive swing_video">
-                    <iframe width="392" height="221" src="https://www.youtube.com/embed/aGrVnoME6tM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -258,24 +296,15 @@
 
 {% block script %}
     <script src="{% static 'js/contactform.js' %}"></script>
-    <script src="{% static 'vendor/splide/js/splide.min.js' %}"></script>
+    <script src="{% static 'vendor/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js' %}"></script>
     <script>
-        new Splide( '.splide', {
-            type: 'loop',
-            perPage: 3,
-            perMove: 1,
-            cover: true,
-            height: '30rem',
-            padding: 20,
-            gap: 5,
-            breakpoints: {
-                900: {
-                    perPage: 2,
-                },
-                600: {
-                    perPage: 1,
-                }
-            }
-        } ).mount();
-    </script>
+        lightbox.option({
+            'disableScrolling': true,
+            'fadeDuration': 50,
+            'imageFadeDuration': 50,
+            'resizeDuration': 50,
+            'showImageNumberLabel': false,
+            'wrapAround': true
+        })
+    </script>    
 {% endblock %}
