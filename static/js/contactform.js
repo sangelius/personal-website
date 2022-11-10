@@ -8,39 +8,42 @@ $(document).ready(function(){ // wait for the page to finish loading
             data : $("#contactForm").serialize(), // serialized form data
 
             // handle a successful response
-            success : function(json) {
-                if (json['stat'] == 'ok') { // success
+            success : function(response_data) {
+                if (response_data.stat == 'ok') { // success
+                    console.log('worked');
+                    
                     //$('#form_content').slideUp(); // hide the form fields
                     $('#form_content').slideUp(function() { // hide the form fields
                        $(window).trigger('resize').trigger('scroll'); // to reset parallax
                     });
                     $('#contact_result').html('<div class="contact_success">'
-                        + json['success']
+                        + response_data.success
                         + '</div>');
                     $(window).trigger('resize').trigger('scroll'); // to reset parallax
                 } else { // error
                     $('#contact_result').html('<div class="text-danger contact_error">'
-                        + json['error_info']
+                        + response_data.error_info
                         + '</div>');
-                    var errors = json['errors']
+                    var errors = jQuery.parseJSON(response_data.errors);
+
                     // add error descriptions
-                    if (errors['name']) {
-                        $('#contact_name_error').html(errors['name']);
+                    if (errors.name) {
+                        $('#contact_name_error').html(errors.name[0].message);
                     } else {
                         $('#contact_name_error').empty();
                     }
-                    if (errors['email']) {
-                        $('#contact_email_error').html(errors['email']);
+                    if (errors.email) {
+                        $('#contact_email_error').html(errors.email[0].message);
                     } else {
                         $('#contact_email_error').empty();
                     }
-                    if (errors['phone']) {
-                        $('#contact_phone_error').html(errors['phone']);
+                    if (errors.phone) {
+                        $('#contact_phone_error').html(errors.phone[0].message);
                     } else {
                         $('#contact_phone_error').empty();
                     }
-                    if (errors['message']) {
-                        $('#contact_message_error').html(errors['message']);
+                    if (errors.message) {
+                        $('#contact_message_error').html(errors.message[0].message);
                     } else {
                         $('#contact_message_error').empty();
                     }
