@@ -30,9 +30,6 @@
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
         </ul>
     </div>
 </nav>
@@ -131,49 +128,6 @@
                     {% endfor %}
                 </ul>
             </div>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
-        <div class="w-100">
-            <h2 class="mb-4">Contact me</h2>
-
-            <form id="contactForm" novalidate>
-                {% csrf_token %}
-                <div class="row vertical-align">
-                    <div class="col-lg-12" id="contact_result">
-                    </div>
-                </div>
-                <div class="row vertical-align" id="form_content">
-                    <div class="col-md-6 mb-3">
-                        <div class="">
-                            <p id="contact_name_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.name }}
-                        </div>
-                        <div class="">
-                            <p id="contact_email_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.email }}
-                        </div>
-                        <div class="">
-                            <p id="contact_phone_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.phone }}
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <div class="">
-                            <p id="contact_message_error" class="help-block text-danger mt-3 mb-0"></p>
-                            {{ contact_form.message }}
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-12 text-center mb-0">
-                        <input id="id_submit" type="submit" value="Send Message" class="btn btn-xl btn-primary btn-orange"/>
-                    </div>
-                </div>
-            </form>
-
         </div>
     </section>
 
